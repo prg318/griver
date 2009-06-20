@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Griver
+Comment=Create tag databases for iRiver media players
+Exec=griver
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=griver
+Categories=GNOME;GTK;AudioVideo;
