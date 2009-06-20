@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # Griver
-version = "0.2.1"
+version = "0.2.2"
 # By Lukas Sabota
 # 9/13/2006
 # Licensed under the GPL version 3
@@ -168,13 +168,13 @@ class GladeHandlers:
 
   def about(event):
     about = gtk.AboutDialog()
-    about.set_name("Griver")
+    about.set_name("gRiver")
     about.set_version(version)
     about.set_icon_from_file('./griver.png')
-    about.set_copyright("Copyright 2007")
-    about.set_license("GPL-2")
-    about.set_website("http://dietschnitzel.com/griver")
-    about.set_authors(["Lukas Sabota <punkrockguy318@comcast.net"])
+    about.set_copyright("Copyright 2009")
+    about.set_license("GPL-3")
+    about.set_website("http://code.google.com/p/griver/")
+    about.set_authors(["Lukas Sabota <ltsmooth42 _at_ gmail _dot_ com>"])
     about.run()
     about.destroy()
 
