@@ -1,24 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
 # Griver
-version = "0.2.2"
+version = "0.2.3"
 # By Lukas Sabota
 # 9/13/2006
 # Licensed under the GPL version 3
-# Copyright (C) 2007 Lukas Sabota
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 3
-# of the License, or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
 import gtk
 import gtk.glade
 import os
@@ -29,8 +15,6 @@ import ctypes
 import ctypes.util
        
 def save_state():
-  print 'saving state...'
-  
   if widgets['h100_radio'].get_active():
     device_type = 0
   else:
@@ -41,7 +25,6 @@ def save_state():
   ofile.close()
 
 def load_state():
-  print 'loading state...'
   try:
     ifile = file(opt_file, 'r')
     widgets['dir_entry'].set_text(pickle.load(ifile))
@@ -170,7 +153,7 @@ class GladeHandlers:
     about = gtk.AboutDialog()
     about.set_name("gRiver")
     about.set_version(version)
-    about.set_icon_from_file('./griver.png')
+    about.set_icon_from_file('./griver.svg')
     about.set_copyright("Copyright 2009")
     about.set_license("GPL-3")
     about.set_website("http://code.google.com/p/griver/")
@@ -181,16 +164,15 @@ class GladeHandlers:
 
   def end(event, event2=None):
     save_state()
-    print 'exitting...'
     sys.exit(1)
 
 class WidgetsWrapper:
   def __init__(self):
     # Search for the glade file
     glade_file = ''
-    # Check first in the directory of this script.
-    if os.path.isfile(os.path.dirname(sys.argv[0])+'/griver.glade'):
-      glade_file = os.path.dirname(sys.argv[0])+'/griver.glade'
+    # Check first in the current directory
+    if os.path.isfile('griver.glade'):
+      glade_file = 'griver.glade'
     # Then check in the share directory (installed)
     elif os.path.isfile(os.path.dirname(sys.argv[0]) +\
     '/../share/griver/griver.glade'):
@@ -229,7 +211,6 @@ def setup_widgets():
   widgets['main_window'].show_all()
   
 def main_loop():
-  print 'entering main loop...'
   gtk.main()
 
 def find_library():
