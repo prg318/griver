@@ -3,8 +3,8 @@ from distutils.core import setup
 
 setup(name="griver",
 		version="0.2.2",
-		scripts = ['griver'],
-		data_files=[('share/griver/', ['griver.glade']),
+		scripts = ['griver.py'],
+		data_files=[('share/griver/', ['griver.ui']),
                 ('share/pixmaps/', ['griver.svg']),
       			    ('share/applications/', ['griver.desktop'])],
 		author = "Lukas Sabota",

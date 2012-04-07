@@ -171,22 +171,25 @@ class WidgetsWrapper:
     # Search for the glade file
     glade_file = ''
     # Check first in the current directory
-    if os.path.isfile('griver.glade'):
-      glade_file = 'griver.glade'
+    if os.path.isfile('griver.ui'):
+      glade_file = 'griver.ui'
     # Then check in the share directory (installed)
     elif os.path.isfile(os.path.dirname(sys.argv[0]) +\
-    '/../share/griver/griver.glade'):
-      glade_file = os.path.dirname(sys.argv[0])+'/../share/griver/griver.glade'
+    '/../share/griver/griver.ui'):
+      glade_file = os.path.dirname(sys.argv[0])+'/../share/griver/griver.ui'
     else:
       print 'ERROR.'
       print 'Could not find the glade interface file.'
       print 'Try reinstalling the application.'
     
-    self.widgets = gtk.glade.XML(glade_file, "main_window")
-    self.widgets.signal_autoconnect(GladeHandlers.__dict__)
+    self.builder = gtk.Builder()
+    self.builder.add_from_file(glade_file)
+    #self.widgets = gtk.glade.XML(glade_file, "main_window")
+    self.widgets = self.builder.get_object("main_window")
+    self.builder.connect_signals(GladeHandlers.__dict__)
 
   def __getitem__(self, key):
-    return self.widgets.get_widget(key)
+    return self.builder.get_object(key)
 
 def setup_environment():
   """
