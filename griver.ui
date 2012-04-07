@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!--Generated with glade3 3.0.2 on Sun Feb 11 20:41:36 2007 by lukas@headache2
+	Version: 3.0.1
+	Date: Wed Sep 27 15:47:10 2006
+	User: lukas
+	Host: kissey
+-->
+<interface>
+  <object class="GtkUIManager" id="uimanager1">
+    <child>
+      <object class="GtkActionGroup" id="actiongroup1">
+        <child>
+          <object class="GtkAction" id="menuitem1">
+            <property name="name">menuitem1</property>
+            <property name="label">_File</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="go_menu">
+            <property name="stock_id">gtk-save</property>
+            <property name="name">go_menu</property>
+            <property name="tooltip">Write the database</property>
+            <property name="label">_Write</property>
+            <signal handler="go" name="activate"/>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="quit_menu">
+            <property name="stock_id">gtk-quit</property>
+            <property name="name">quit_menu</property>
+            <signal handler="end" name="activate"/>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="menuitem4">
+            <property name="name">menuitem4</property>
+            <property name="label">_Help</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="about_menu">
+            <property name="stock_id">gtk-about</property>
+            <property name="name">about_menu</property>
+            <signal handler="about" name="activate"/>
+          </object>
+        </child>
+      </object>
+    </child>
+    <ui>
+      <menubar name="menubar1">
+        <menu action="menuitem1">
+          <menuitem action="go_menu"/>
+          <separator/>
+          <menuitem action="quit_menu"/>
+        </menu>
+        <menu action="menuitem4">
+          <menuitem action="about_menu"/>
+        </menu>
+      </menubar>
+    </ui>
+  </object>
+  <object class="GtkWindow" id="main_window">
+    <property name="title">Griver</property>
+    <property name="icon">griver.svg</property>
+    <signal handler="end" name="delete_event"/>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkMenuBar" constructor="uimanager1" id="menubar1">
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox1">
+            <property name="visible">True</property>
+            <property name="border_width">10</property>
+            <property name="spacing">5</property>
+            <child>
+              <object class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Device Location: </property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="dir_entry">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="browse_button">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Browse...</property>
+                <property name="use_underline">True</property>
+                <property name="xalign">0.43000000715255737</property>
+                <signal handler="browse" name="clicked"/>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFrame" id="frame1">
+            <property name="visible">True</property>
+            <property name="border_width">10</property>
+            <property name="label_xalign">0</property>
+            <property name="shadow_type">GTK_SHADOW_IN</property>
+            <child>
+              <object class="GtkAlignment" id="alignment1">
+                <property name="visible">True</property>
+                <property name="top_padding">3</property>
+                <property name="bottom_padding">3</property>
+                <property name="left_padding">12</property>
+                <child>
+                  <object class="GtkHBox" id="hbox2">
+                    <property name="visible">True</property>
+                    <property name="spacing">5</property>
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkRadioButton" id="h100_radio">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">H100 Series</property>
+                        <property name="draw_indicator">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkRadioButton" id="h300_radio">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">H300 Series</property>
+                        <property name="draw_indicator">True</property>
+                        <property name="group">h100_radio</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child type="label">
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;b&gt;iRiver Series&lt;/b&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkProgressBar" id="progress">
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="show_text">True</property>
+            <property name="text"> </property>
+            <property name="discrete_blocks">7</property>
+          </object>
+          <packing>
+            <property name="padding">10</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="go_button">
+            <property name="visible">True</property>
+            <property name="border_width">10</property>
+            <property name="label" translatable="yes">_Write Database</property>
+            <property name="use_underline">True</property>
+            <signal handler="go" name="clicked"/>
+          </object>
+          <packing>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="status">
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
