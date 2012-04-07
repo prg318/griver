@@ -1,6 +1,6 @@
 Requirements:
 python (tested with 2.4)
-libiriverdb (tested with 1.4)
+libiriverdb (tested with 1.6) -- get it from http://bodgitandscarper.co.uk/libiriverdb/
 gtk with python bindings (tested with 2.8)
 glade with python bindings (tested with 2.8)
 ctypes (tested with 0.9.6) (NOTE: this is included with python 2.5)
