@@ -61,7 +61,7 @@
   </object>
   <object class="GtkWindow" id="main_window">
     <property name="title">Griver</property>
-    <property name="icon">griver.svg</property>
+    <property name="icon">griver.png</property>
     <signal handler="end" name="delete_event"/>
     <child>
       <object class="GtkVBox" id="vbox1">

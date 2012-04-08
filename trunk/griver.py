@@ -153,7 +153,7 @@ class GladeHandlers:
 		about = gtk.AboutDialog()
 		about.set_name("gRiver")
 		about.set_version(version)
-		#about.set_icon_from_file('./griver.svg')  # broken right now; screw it
+		about.set_icon_from_file('./griver.png')  # broken right now; screw it
 		about.set_copyright("Copyright 2009")
 		about.set_license("GPL-3")
 		about.set_website("http://code.google.com/p/griver/")
