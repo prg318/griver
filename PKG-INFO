@@ -1,7 +1,7 @@
 Metadata-Version: 1.0
 Name: griver
 Version: 0.2.3
-Summary: Small database generator for iriver H100/H300 devices based on libiriver.
+Summary: Small database generator for iriver H100/H300 devices based on libiriverdb.
 Home-page: http://code.google.com/p/griver/
 Author: Lukas Sabota
 Author-email: LTsmooth42 _at_ gmail _dot_ com
