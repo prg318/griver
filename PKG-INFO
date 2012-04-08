@@ -1,10 +1,10 @@
 Metadata-Version: 1.0
 Name: griver
-Version: 0.2.1
-Summary: UNKNOWN
-Home-page: http://dietschnitzel.com/griver
+Version: 0.2.3
+Summary: Small database generator for iriver H100/H300 devices based on libiriver.
+Home-page: http://code.google.com/p/griver/
 Author: Lukas Sabota
-Author-email: punkrockguy318@comcast.net
-License: UNKNOWN
-Description: UNKNOWN
-Platform: UNKNOWN
+Author-email: LTsmooth42 _at_ gmail _dot_ com
+License: GPL
+Description: Small database generator for iriver H100/H300 devices based on libiriver.
+Platform: Any

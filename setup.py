@@ -2,7 +2,7 @@
 from distutils.core import setup
 
 setup(name="griver",
-		version="0.2.2",
+		version="0.2.3",
 		scripts = ['griver.py'],
 		data_files=[('share/griver/', ['griver.ui']),
 			('share/pixmaps/', ['griver.svg']),
