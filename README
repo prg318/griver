@@ -1,3 +1,8 @@
+NOTE:
+This is an export of a google code repo from years ago.
+I don't know where my iRiver H200 is so I have no interest in actively developing this project, but it should work for anyone that still have a working iRiver device that is compatible with libiriver.
+Feel free to report any issues if anyone even has a working device anymore.
+
 Requirements:
 	Python 2.x (> 2.5)
 	PyGTK 2.x
