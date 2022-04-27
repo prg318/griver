@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 # Griver
-version = "0.2.3"
+version = "0.2.4"
 # By Lukas Sabota
 # 9/13/2006
 # Licensed under the GPL version 3
